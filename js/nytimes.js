@@ -47,7 +47,7 @@ function displayResults(json) {
     // STEP 6: Create the variable articles to capture the articles from the JSON object
     let articles = json.response.docs;
 
-    if (articles.length === 0) {
+    if (articles === null) {
         const para = document.createElement("p");
         para.textContent = "No results returned.";
         section.appendChild(para);
